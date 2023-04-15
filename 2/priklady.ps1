@@ -1,15 +1,13 @@
 # musime pridat relativni a absolutni path
 $source_file = Join-Path -Path $PSScriptRoot -ChildPath "priklady.txt"
 
+$buffer = "" # buffer vystupu
+
 $i = 0 # pocitani pocet iteraci
 
-"" | Out-File -FilePath priklady.txt -Append # novy radek
-
-# iterujeme kazdy radek v souboru
+# iterujeme pres kazdy radek v souboru
 foreach ($line in Get-Content $source_file) {
     $i = $i + 1
-    $err = $false
-
     $problem = $line.Split(" ")
 
     # pokud je radek prazdny ignoruj
@@ -19,12 +17,12 @@ foreach ($line in Get-Content $source_file) {
 
     # FIXME: zero fails this check
     if(!($problem[0] -as [decimal])){
-         "ERROR radek $($i): invalidni prvni cislo" | Out-File -FilePath priklady.txt -Append
-        continue
+        Write-Error "ERROR radek $($i): invalidni prvni cislo"
+        exit
     }
     if(!($problem[2] -as [decimal])){
-        "ERROR radek $($i): invalidni druhe cislo" | Out-File -FilePath priklady.txt -Append
-        continue
+        Write-Error "ERROR radek $($i): invalidni druhe cislo" 
+        exit
     }
 
     # zjistime jake je znemenko, podle toho bud pricteme, odecteme, nasobime, delime
@@ -47,13 +45,17 @@ foreach ($line in Get-Content $source_file) {
             break
         }
         default {
-            "ERROR radek $($i): bylo nalezeno invalidni znamenko" | Out-File -FilePath priklady.txt -Append
-            $err = $true
+           Write-Error "ERROR radek $($i): bylo nalezeno invalidni znamenko"
+           exit
         }
     }
 
-    # napsat zadani a vysledek pokud se nestal error
-    if (-not $err){
-        "$line = $answer" | Out-File -FilePath priklady.txt -Append
-    }
+    # zapsat do bufferu
+    $buffer += "$line = $answer`n"
 }
+
+# pokud kod dosel na toto misto, znamena to, ze vse probehlo bez erroru
+# zapis tedy vystup do souboku
+
+"" | Out-File -FilePath priklady.txt -Append # novy radek
+$buffer | Out-File -FilePath priklady.txt -Append
