@@ -149,7 +149,7 @@ for /f "tokens=1-5 delims=," %%a in (studenti.csv) do (
     ) else if "!rocnik!"=="Třetí ročník" (
       net user !jmeno!.!prijmeni! /expires:08/31/2024 >nul 2>&1
     ) else if "!rocnik!"=="Čtvrtý ročník" (
-      net user !jmeno!.!prijmeni! /expires:08/21/2023 >nul 2>&1
+      net user !jmeno!.!prijmeni! /expires:08/31/2023 >nul 2>&1
     )
 
     :: priradime skupinu STUDENTI
