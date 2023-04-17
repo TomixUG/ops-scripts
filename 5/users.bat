@@ -9,9 +9,7 @@ net session >nul 2>&1
 if errorlevel 1 (
     echo ERROR: Script musi byt spusten jako admin
     exit /b 1
-) else (
-    rmdir "C:\Windows\System32\Test" >nul 2>&1
-)
+) 
 
 :: vytvorime vsechny skupiny:
 :: pokud je error 2 znamena to, ze skupina uz existuje

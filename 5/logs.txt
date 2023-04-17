@@ -872,3 +872,440 @@ The command completed successfully.
  
  
  
+===== Skupiny: =====  
+ Skupina T1A jiz existuje 
+ Skupina T2A jiz existuje 
+ Skupina T3A jiz existuje 
+ Skupina T4A jiz existuje 
+ Skupina E1A jiz existuje 
+ Skupina E2A jiz existuje 
+ Skupina E3A jiz existuje 
+ Skupina E4A jiz existuje 
+ Skupina E1B jiz existuje 
+ Skupina E2B jiz existuje 
+ Skupina E3B jiz existuje 
+ Skupina E4B jiz existuje 
+ Skupina ICT jiz existuje 
+ Skupina ELEKTRO jiz existuje 
+ Skupina MUZI jiz existuje 
+ Skupina ZENY jiz existuje 
+ Skupina STUDENTI jiz existuje 
+  
+  
+===== Vytvareni uctu uzivateli: bara stepankova: ===== 
+nastavovani data expirace uctu 
+prirazovani skupiny STUDENTI 
+prirazovani skupiny podle tridy 
+prirazovani skupiny podle druhu oboru 
+prirazovani skupiny podle pohlavi 
+ 
+Informace o vytvorenem uctu: 
+User name                    bara.stepankova
+Full Name                    
+Comment                      
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              8/31/2026 12:00:00 AM
+
+Password last set            4/18/2023 1:19:47 AM
+Password expires             5/30/2023 1:19:47 AM
+Password changeable          4/18/2023 1:19:47 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   Never
+
+Logon hours allowed          All
+
+Local Group Memberships      *ELEKTRO              *STUDENTI             
+                             *Users                *ZENY                 
+Global Group memberships     *None                 
+The command completed successfully.
+
+ 
+ 
+ 
+ 
+  
+  
+===== Vytvareni uctu uzivateli: laura strelecka: ===== 
+nastavovani data expirace uctu 
+prirazovani skupiny STUDENTI 
+prirazovani skupiny podle tridy 
+prirazovani skupiny podle druhu oboru 
+prirazovani skupiny podle pohlavi 
+ 
+Informace o vytvorenem uctu: 
+User name                    laura.strelecka
+Full Name                    
+Comment                      
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              8/31/2024 12:00:00 AM
+
+Password last set            4/18/2023 1:19:48 AM
+Password expires             5/30/2023 1:19:48 AM
+Password changeable          4/18/2023 1:19:48 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   Never
+
+Logon hours allowed          All
+
+Local Group Memberships      *ICT                  *STUDENTI             
+                             *T3A                  *Users                
+                             *ZENY                 
+Global Group memberships     *None                 
+The command completed successfully.
+
+ 
+ 
+ 
+ 
+  
+  
+===== Vytvareni uctu uzivateli: pavlina mertova: ===== 
+nastavovani data expirace uctu 
+prirazovani skupiny STUDENTI 
+prirazovani skupiny podle tridy 
+prirazovani skupiny podle druhu oboru 
+prirazovani skupiny podle pohlavi 
+ 
+Informace o vytvorenem uctu: 
+User name                    pavlina.mertova
+Full Name                    
+Comment                      
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              8/21/2023 12:00:00 AM
+
+Password last set            4/18/2023 1:19:48 AM
+Password expires             5/30/2023 1:19:48 AM
+Password changeable          4/18/2023 1:19:48 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   Never
+
+Logon hours allowed          All
+
+Local Group Memberships      *ICT                  *STUDENTI             
+                             *T4A                  *Users                
+                             *ZENY                 
+Global Group memberships     *None                 
+The command completed successfully.
+
+ 
+ 
+ 
+ 
+  
+  
+===== Vytvareni uctu uzivateli: dorota folwarczna: ===== 
+nastavovani data expirace uctu 
+prirazovani skupiny STUDENTI 
+prirazovani skupiny podle tridy 
+prirazovani skupiny podle druhu oboru 
+prirazovani skupiny podle pohlavi 
+ 
+Informace o vytvorenem uctu: 
+User name                    dorota.folwarczna
+Full Name                    
+Comment                      
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              8/31/2024 12:00:00 AM
+
+Password last set            4/18/2023 1:19:49 AM
+Password expires             5/30/2023 1:19:49 AM
+Password changeable          4/18/2023 1:19:49 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   Never
+
+Logon hours allowed          All
+
+Local Group Memberships      *ICT                  *STUDENTI             
+                             *T3A                  *Users                
+                             *ZENY                 
+Global Group memberships     *None                 
+The command completed successfully.
+
+ 
+ 
+ 
+ 
+  
+  
+===== Vytvareni uctu uzivateli: jakub bil: ===== 
+nastavovani data expirace uctu 
+prirazovani skupiny STUDENTI 
+prirazovani skupiny podle tridy 
+prirazovani skupiny podle druhu oboru 
+prirazovani skupiny podle pohlavi 
+ 
+Informace o vytvorenem uctu: 
+User name                    jakub.bil
+Full Name                    
+Comment                      
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              8/31/2025 12:00:00 AM
+
+Password last set            4/18/2023 1:19:49 AM
+Password expires             5/30/2023 1:19:49 AM
+Password changeable          4/18/2023 1:19:49 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   Never
+
+Logon hours allowed          All
+
+Local Group Memberships      *E2A                  *ELEKTRO              
+                             *MUZI                 *STUDENTI             
+                             *Users                
+Global Group memberships     *None                 
+The command completed successfully.
+
+ 
+ 
+ 
+ 
+  
+  
+===== Vytvareni uctu uzivateli: alan vatras: ===== 
+nastavovani data expirace uctu 
+prirazovani skupiny STUDENTI 
+prirazovani skupiny podle tridy 
+prirazovani skupiny podle druhu oboru 
+prirazovani skupiny podle pohlavi 
+ 
+Informace o vytvorenem uctu: 
+User name                    alan.vatras
+Full Name                    
+Comment                      
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              8/31/2026 12:00:00 AM
+
+Password last set            4/18/2023 1:19:50 AM
+Password expires             5/30/2023 1:19:50 AM
+Password changeable          4/18/2023 1:19:50 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   Never
+
+Logon hours allowed          All
+
+Local Group Memberships      *E1B                  *ELEKTRO              
+                             *MUZI                 *STUDENTI             
+                             *Users                
+Global Group memberships     *None                 
+The command completed successfully.
+
+ 
+ 
+ 
+ 
+  
+  
+===== Vytvareni uctu uzivateli: vitezslav tkac: ===== 
+nastavovani data expirace uctu 
+prirazovani skupiny STUDENTI 
+prirazovani skupiny podle tridy 
+prirazovani skupiny podle druhu oboru 
+prirazovani skupiny podle pohlavi 
+ 
+Informace o vytvorenem uctu: 
+User name                    vitezslav.tkac
+Full Name                    
+Comment                      
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              8/21/2023 12:00:00 AM
+
+Password last set            4/18/2023 1:19:53 AM
+Password expires             5/30/2023 1:19:53 AM
+Password changeable          4/18/2023 1:19:53 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   Never
+
+Logon hours allowed          All
+
+Local Group Memberships      *E4B                  *ELEKTRO              
+                             *MUZI                 *STUDENTI             
+                             *Users                
+Global Group memberships     *None                 
+The command completed successfully.
+
+ 
+ 
+ 
+ 
+  
+  
+===== Vytvareni uctu uzivateli: marek tomanek: ===== 
+nastavovani data expirace uctu 
+prirazovani skupiny STUDENTI 
+prirazovani skupiny podle tridy 
+prirazovani skupiny podle druhu oboru 
+prirazovani skupiny podle pohlavi 
+ 
+Informace o vytvorenem uctu: 
+User name                    marek.tomanek
+Full Name                    
+Comment                      
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              8/31/2026 12:00:00 AM
+
+Password last set            4/18/2023 1:19:53 AM
+Password expires             5/30/2023 1:19:53 AM
+Password changeable          4/18/2023 1:19:53 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   Never
+
+Logon hours allowed          All
+
+Local Group Memberships      *E1B                  *ELEKTRO              
+                             *MUZI                 *STUDENTI             
+                             *Users                
+Global Group memberships     *None                 
+The command completed successfully.
+
+ 
+ 
+ 
+ 
+  
+  
+===== Vytvareni uctu uzivateli: jiri stanek: ===== 
+nastavovani data expirace uctu 
+prirazovani skupiny STUDENTI 
+prirazovani skupiny podle tridy 
+prirazovani skupiny podle druhu oboru 
+prirazovani skupiny podle pohlavi 
+ 
+Informace o vytvorenem uctu: 
+User name                    jiri.stanek
+Full Name                    
+Comment                      
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              8/21/2023 12:00:00 AM
+
+Password last set            4/18/2023 1:19:54 AM
+Password expires             5/30/2023 1:19:54 AM
+Password changeable          4/18/2023 1:19:54 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   Never
+
+Logon hours allowed          All
+
+Local Group Memberships      *E4B                  *ELEKTRO              
+                             *MUZI                 *STUDENTI             
+                             *Users                
+Global Group memberships     *None                 
+The command completed successfully.
+
+ 
+ 
+ 
+ 
+  
+  
+===== Vytvareni uctu uzivateli: filip skarka: ===== 
+nastavovani data expirace uctu 
+prirazovani skupiny STUDENTI 
+prirazovani skupiny podle tridy 
+prirazovani skupiny podle druhu oboru 
+prirazovani skupiny podle pohlavi 
+ 
+Informace o vytvorenem uctu: 
+User name                    filip.skarka
+Full Name                    
+Comment                      
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              8/21/2023 12:00:00 AM
+
+Password last set            4/18/2023 1:19:56 AM
+Password expires             5/30/2023 1:19:56 AM
+Password changeable          4/18/2023 1:19:56 AM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   Never
+
+Logon hours allowed          All
+
+Local Group Memberships      *E4B                  *ELEKTRO              
+                             *MUZI                 *STUDENTI             
+                             *Users                
+Global Group memberships     *None                 
+The command completed successfully.
+
+ 
+ 
+ 
+ 
