@@ -1,155 +1,50 @@
-Aktualni datum 14.03.2023 15:12:48,92 
+Aktualni datum Tue 04/18/2023  2:16:32.52 
  
-Nazev prihlaseneho uzivatele: T3A 
+Nazev prihlaseneho uzivatele: Student 
  
 Systeminfo: 
-
-Host Name:                 S-125
-OS Name:                   Microsoft Windows 10 Education
-OS Version:                10.0.18363 N/A Build 18363
-OS Manufacturer:           Microsoft Corporation
-OS Configuration:          Standalone Workstation
-OS Build Type:             Multiprocessor Free
-Registered Owner:          student
-Registered Organization:   
-Product ID:                00328-20091-72791-AA406
-Original Install Date:     31.08.2020, 7:08:58
-System Boot Time:          14.03.2023, 14:22:22
-System Manufacturer:       ATComputers
-System Model:              AUTOCONT OFFICEPRO 
-System Type:               x64-based PC
-Processor(s):              1 Processor(s) Installed.
-                           [01]: Intel64 Family 6 Model 58 Stepping 9 GenuineIntel ~3400 Mhz
-BIOS Version:              American Megatrends Inc. FBb ZA, 10.03.2014
-Windows Directory:         C:\Windows
-System Directory:          C:\Windows\system32
-Boot Device:               \Device\HarddiskVolume3
-System Locale:             cs;¬eçtina
-Input Locale:              cs;¬eçtina
-Time Zone:                 (UTC+01:00) Praha, Bratislava, Budapeçœ, BØlehrad, Lublaå
-Total Physical Memory:     16ÿ272 MB
-Available Physical Memory: 8ÿ950 MB
-Virtual Memory: Max Size:  24ÿ272 MB
-Virtual Memory: Available: 14ÿ643 MB
-Virtual Memory: In Use:    9ÿ629 MB
-Page File Location(s):     D:\pagefile.sys
-Domain:                    FRENGP.CZ
-Logon Server:              \\S-125
-Hotfix(s):                 15 Hotfix(s) Installed.
-                           [01]: KB5013627
-                           [02]: KB4517245
-                           [03]: KB4535680
-                           [04]: KB4561600
-                           [05]: KB4569073
-                           [06]: KB4576751
-                           [07]: KB4576754
-                           [08]: KB4589211
-                           [09]: KB5005412
-                           [10]: KB5013945
-                           [11]: KB5006936
-                           [12]: KB5007375
-                           [13]: KB5011573
-                           [14]: KB5014029
-                           [15]: KB5005700
-Network Card(s):           10 NIC(s) Installed.
-                           [01]: Qualcomm Atheros AR9485 Wireless Network Adapter
-                                 Connection Name: Wi-Fi
-                                 Status:          Media disconnected
-                           [02]: Intel(R) PRO/1000 PT Dual Port Server Adapter
-                                 Connection Name: Ethernet
-                                 Status:          Media disconnected
-                           [03]: Intel(R) PRO/1000 PT Dual Port Server Adapter
-                                 Connection Name: Ethernet 2
-                                 Status:          Media disconnected
-                           [04]: Qualcomm Atheros AR8161 PCI-E Gigabit Ethernet Controller (NDIS 6.30)
-                                 Connection Name: Ethernet 3
-                                 Status:          Media disconnected
-                           [05]: Intel(R) PRO/1000 PT Dual Port Server Adapter
-                                 Connection Name: Ethernet 4
-                                 DHCP Enabled:    Yes
-                                 DHCP Server:     192.168.120.1
-                                 IP address(es)
-                                 [01]: 192.168.120.117
-                                 [02]: fe80::f937:ade3:c864:472
-                           [06]: Intel(R) PRO/1000 PT Dual Port Server Adapter
-                                 Connection Name: Ethernet 5
-                                 Status:          Media disconnected
-                           [07]: VirtualBox Host-Only Ethernet Adapter
-                                 Connection Name: VirtualBox Host-Only Network
-                                 DHCP Enabled:    No
-                                 IP address(es)
-                                 [01]: 192.168.56.1
-                                 [02]: fe80::c5ac:81f1:ccb2:18c8
-                           [08]: VMware Virtual Ethernet Adapter for VMnet1
-                                 Connection Name: VMware Network Adapter VMnet1
-                                 DHCP Enabled:    Yes
-                                 DHCP Server:     255.255.255.255
-                                 IP address(es)
-                                 [01]: 169.254.197.104
-                                 [02]: fe80::707a:119c:3afa:c568
-                           [09]: VMware Virtual Ethernet Adapter for VMnet8
-                                 Connection Name: VMware Network Adapter VMnet8
-                                 DHCP Enabled:    Yes
-                                 DHCP Server:     192.168.174.254
-                                 IP address(es)
-                                 [01]: 192.168.174.1
-                                 [02]: fe80::319a:52bf:ebe4:4e49
-                           [10]: VMware Virtual Ethernet Adapter for VMnet2
-                                 Connection Name: VMware Network Adapter VMnet2
-                                 DHCP Enabled:    No
-                                 IP address(es)
-                                 [01]: 192.168.70.1
-                                 [02]: fe80::d101:af8b:c1c:c109
-Hyper-V Requirements:      VM Monitor Mode Extensions: Yes
-                           Virtualization Enabled In Firmware: Yes
-                           Second Level Address Translation: Yes
-                           Data Execution Prevention Available: Yes
  
 Vyhledavaci cesty (path): 
-C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files (x86)\Common Files\Netop\;C:\Program Files (x86)\Netop\Vision\XL\;D:\users\T3A\AppData\Local\Microsoft\WindowsApps;D:\users\T3A\AppData\Local\Programs\Git\cmd 
+C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Users\Student\AppData\Local\Microsoft\WindowsApps; 
  
 Systemove promenne: 
 ALLUSERSPROFILE=C:\ProgramData
-APPDATA=D:\users\T3A\AppData\Roaming
+APPDATA=C:\Users\Student\AppData\Roaming
 CommonProgramFiles=C:\Program Files\Common Files
 CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
 CommonProgramW6432=C:\Program Files\Common Files
-COMPUTERNAME=S-125
+COMPUTERNAME=KVM-VIRTUAL-PC
 ComSpec=C:\Windows\system32\cmd.exe
 DriverData=C:\Windows\System32\Drivers\DriverData
 FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
 FPS_BROWSER_USER_PROFILE_STRING=Default
-HOMEDRIVE=d:
-HOMEPATH=\users
-LOCALAPPDATA=D:\users\T3A\AppData\Local
-LOGONSERVER=\\S-125
-MeXLDir=C:\Program Files (x86)\Netop\Vision\
-NUMBER_OF_PROCESSORS=4
-OneDrive=D:\users\T3A\OneDrive
+HOMEDRIVE=C:
+HOMEPATH=\Users\Student
+LOCALAPPDATA=C:\Users\Student\AppData\Local
+LOGONSERVER=\\KVM-VIRTUAL-PC
+NUMBER_OF_PROCESSORS=2
+OneDrive=C:\Users\Student\OneDrive
 OS=Windows_NT
-Path=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files (x86)\Common Files\Netop\;C:\Program Files (x86)\Netop\Vision\XL\;D:\users\T3A\AppData\Local\Microsoft\WindowsApps;D:\users\T3A\AppData\Local\Programs\Git\cmd
+Path=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Users\Student\AppData\Local\Microsoft\WindowsApps;
 PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
 PROCESSOR_ARCHITECTURE=AMD64
-PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
 PROCESSOR_LEVEL=6
-PROCESSOR_REVISION=3a09
+PROCESSOR_REVISION=9e09
 ProgramData=C:\ProgramData
 ProgramFiles=C:\Program Files
 ProgramFiles(x86)=C:\Program Files (x86)
 ProgramW6432=C:\Program Files
 PROMPT=$P$G
 PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
-PT8HOME=C:\Program Files\Cisco Packet Tracer 8.1.0
 PUBLIC=C:\Users\Public
-QT_DEVICE_PIXEL_RATIO=auto
 SESSIONNAME=Console
 SystemDrive=C:
 SystemRoot=C:\Windows
-TEMP=D:\users\T3A\AppData\Local\Temp
-TMP=D:\users\T3A\AppData\Local\Temp
-USERDOMAIN=S-125
-USERDOMAIN_ROAMINGPROFILE=S-125
-USERNAME=T3A
-USERPROFILE=D:\users\T3A
-VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\
+TEMP=C:\Users\Student\AppData\Local\Temp
+TMP=C:\Users\Student\AppData\Local\Temp
+USERDOMAIN=KVM-VIRTUAL-PC
+USERDOMAIN_ROAMINGPROFILE=KVM-VIRTUAL-PC
+USERNAME=Student
+USERPROFILE=C:\Users\Student
 windir=C:\Windows
