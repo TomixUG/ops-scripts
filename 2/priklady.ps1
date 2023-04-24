@@ -3,7 +3,7 @@ $source_file = Join-Path -Path $PSScriptRoot -ChildPath "priklady.txt"
 
 $buffer = "" # buffer vystupu
 
-$i = 0 # pocitani pocet iteraci
+$i = 0 # pocitani pocet iteraci (pro psani chyb vstupu uzivatele)
 
 # iterujeme pres kazdy radek v souboru
 foreach ($line in Get-Content $source_file) {
@@ -15,13 +15,14 @@ foreach ($line in Get-Content $source_file) {
         continue
     }
 
-    # FIXME: zero fails this check
-    if(!($problem[0] -as [decimal])){
-        Write-Error "ERROR radek $($i): invalidni prvni cislo"
+    # zkontroluj jestli je vstup validni cislo
+    # -as [decimal] neprojde pro nulu, proto se musi pridat kontrola jestli je toto cislo 0
+    if(!($problem[0] -eq "0") -and !($problem[0] -as [decimal])){
+        Write-Output "ERROR radek $($i): invalidni prvni cislo"
         exit
     }
-    if(!($problem[2] -as [decimal])){
-        Write-Error "ERROR radek $($i): invalidni druhe cislo" 
+    if(!($problem[2] -eq "0") -and !($problem[2] -as [decimal])){
+        Write-Output "ERROR radek $($i): invalidni druhe cislo" 
         exit
     }
 
@@ -41,11 +42,18 @@ foreach ($line in Get-Content $source_file) {
             break
         }
         "/" {
-            $answer = [math]::Round([float]$problem[0] / [float]$problem[2], 2) 
+            $answer = [math]::Round([float]$problem[0] / [float]$problem[2], 2)
+
+            # zkontroluj jestli se nedeli nulou
+            if($problem[2] -eq 0){
+                Write-Output "ERROR radek $($i): Nulou se neda delit!"
+                exit
+            }
+
             break
         }
         default {
-           Write-Error "ERROR radek $($i): bylo nalezeno invalidni znamenko"
+           Write-Output "ERROR radek $($i): bylo nalezeno invalidni znamenko"
            exit
         }
     }
@@ -55,7 +63,7 @@ foreach ($line in Get-Content $source_file) {
 }
 
 # pokud kod dosel na toto misto, znamena to, ze vse probehlo bez erroru
-# zapis tedy vystup do souboku
-
-"" | Out-File -FilePath priklady.txt -Append # novy radek
-$buffer | Out-File -FilePath priklady.txt -Append
+# zapis tedy vystup do souboru
+"" | Out-File -FilePath priklady.txt -Append -Encoding utf8 # novy radek
+"" | Out-File -FilePath priklady.txt -Append -Encoding utf8 # novy radek
+$buffer | Out-File -FilePath $source_file -Append -Encoding utf8
