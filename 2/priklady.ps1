@@ -19,11 +19,11 @@ foreach ($line in Get-Content $source_file) {
     # -as [decimal] neprojde pro nulu, proto se musi pridat kontrola jestli je toto cislo 0
     if(!($problem[0] -eq "0") -and !($problem[0] -as [decimal])){
         Write-Output "ERROR radek $($i): invalidni prvni cislo"
-        exit
+        exit 1
     }
     if(!($problem[2] -eq "0") -and !($problem[2] -as [decimal])){
         Write-Output "ERROR radek $($i): invalidni druhe cislo" 
-        exit
+        exit 1
     }
 
     # zjistime jake je znemenko, podle toho bud pricteme, odecteme, nasobime, delime
@@ -47,14 +47,14 @@ foreach ($line in Get-Content $source_file) {
             # zkontroluj jestli se nedeli nulou
             if($problem[2] -eq 0){
                 Write-Output "ERROR radek $($i): Nulou se neda delit!"
-                exit
+                exit 1
             }
 
             break
         }
         default {
            Write-Output "ERROR radek $($i): bylo nalezeno invalidni znamenko"
-           exit
+           exit 1
         }
     }
 
@@ -67,3 +67,5 @@ foreach ($line in Get-Content $source_file) {
 "" | Out-File -FilePath priklady.txt -Append -Encoding utf8 # novy radek
 "" | Out-File -FilePath priklady.txt -Append -Encoding utf8 # novy radek
 $buffer | Out-File -FilePath $source_file -Append -Encoding utf8
+
+Write-Output "Priklady ze souboru priklady.txt byly uspesne vypocitany a ulozeny na konec tohoto souboru"
