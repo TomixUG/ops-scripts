@@ -12,6 +12,7 @@ if not exist %slozka% (
 
 :: Nastavit read write execute vsem uzivatelum, neukazuj vystup prikazu
 icacls %slozka% /grant Everyone:(RX,W) > nul
+
 :: Probehl prikaz spravne?
 if errorlevel 1 (
     echo Nastala chyba v nastavovani prav ve slozce: %slozka%

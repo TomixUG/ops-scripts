@@ -9,8 +9,6 @@ if errorlevel 1 (
     exit /b 1
 ) else (
     echo KONEKTIVITA OK
-    echo KONEKTIVITA OK > internet.txt
-    echo. >> internet.txt
 )
 
 :: Pta se uzivatele tak dlouho, nez neco napise
@@ -22,8 +20,15 @@ if "%address%"=="" (
     goto loop
 )
 
+:: Zkontroluje jestli je zadana domena spravna
+ping -n 3 %address% > nul
+if errorlevel 1 (
+    echo Zadali jste invalidni domenu
+    exit /b 1
+)
+
 :: Napise zadanou adresu do souboru
-echo Adresa: %address% >> internet.txt
+echo Adresa: %address% > internet.txt
 echo. >> internet.txt
 
 :: Napise tracert
