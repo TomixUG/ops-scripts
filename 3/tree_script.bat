@@ -19,32 +19,37 @@ if errorlevel 1 (
     echo Nastavovani prav slozky problehlo uspesne: %slozka%
 )
 
+:: argument /s v prikazu dir to udela rekurzivne
+
 :: Vypsat souboru stromovou strukturu adresářů na disku C
 :: /A vypise v ASCII
 echo Generovani stromove struktury...
 tree C:\ /A > %slozka%\tree.txt
 
 
-echo Generovani stuktury (normalni soubory a slozky)...
+echo Generovani stuktury (jen normalni soubory a slozky)...
 echo Normalni slozky a soubory: > %slozka%\hidden.txt
 :: pomoci for projdeme kazdy bezny soubor a slozku v adresari 
 :: cestu toho souboru dame do prikazu attrib, ktery napise atributy a cestu k souboru
-for /f "delims=" %%a in ('dir /b /a-h C:\Windows') do (  
+for /f "delims=" %%a in ('dir /b C:\Windows') do (
     attrib "C:\Windows\%%a" >> %slozka%\hidden.txt
 )
 
-echo Generovani stuktury (skryte soubory)...
+:: /ah-d : napis jenom hidden soubory, nikoliv slozky
+:: /ah : napis hidden soubory a slozky
+echo Generovani stuktury (skryte soubory a slozky)...
 echo. >> %slozka%\hidden.txt
-echo. Skryte soubory >> %slozka%\hidden.txt
-for /f "delims=" %%a in ('dir /b /ah-d C:\Windows') do (
+echo. Skryte soubory: >> %slozka%\hidden.txt
+for /f "delims=" %%a in ('dir /b /ah C:\Windows') do (
     attrib "C:\Windows\%%a" >> %slozka%\hidden.txt
 )
 
-
+:: atribute link
+:: /al : show links
 echo Generovani stuktury (symlinks, hardlinks)...
 echo. >> %slozka%\hidden.txt
 echo Hardlinky and Softlinky: >> %slozka%\hidden.txt
-for /f "delims=" %%a in ('dir /b /a:l C:\Windows 2^>nul') do (
+for /f "delims=" %%a in ('dir /b /al C:\Windows 2^>nul') do (
     attrib "C:\Windows\%%a" >> %slozka%\hidden.txt
 )
 :: vypsani hardlinku

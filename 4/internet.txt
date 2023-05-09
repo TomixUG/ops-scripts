@@ -4,22 +4,22 @@ Adresa: google.com
  
 ===== Cesta paketu: ===== 
 
-Tracing route to google.com [142.251.37.110]
+Tracing route to google.com [142.251.36.142]
 over a maximum of 30 hops:
 
   1    <1 ms    <1 ms    <1 ms  192.168.122.1 
-  2    13 ms     2 ms    32 ms  192.168.2.1 
-  3     3 ms     5 ms     2 ms  10.10.10.1 
-  4    33 ms    15 ms    12 ms  10.77.2.1 
-  5    87 ms    61 ms    91 ms  212-158-152-1.static.bluetone.cz [212.158.152.1] 
-  6    24 ms    38 ms    27 ms  85-207-54-65.static.bluetone.cz [85.207.54.65] 
-  7    24 ms    28 ms    72 ms  84-244-124-57.static.bluetone.cz [84.244.124.57] 
-  8    67 ms    34 ms    53 ms  84-244-124-246.static.bluetone.cz [84.244.124.246] 
-  9    25 ms    30 ms    21 ms  ae4-102-mx-site4.bluetone.cz [84.244.126.166] 
- 10    72 ms    37 ms    78 ms  nixcz2.net.google.com [91.210.16.168] 
- 11    51 ms    34 ms    46 ms  108.170.245.49 
- 12    22 ms    44 ms    53 ms  142.251.224.229 
- 13    41 ms    35 ms    20 ms  prg03s13-in-f14.1e100.net [142.251.37.110] 
+  2     2 ms     2 ms     1 ms  192.168.137.60 
+  3     *        *        *     Request timed out.
+  4    42 ms    28 ms    35 ms  10.84.10.65 
+  5    42 ms    29 ms    36 ms  194.228.115.77 
+  6     *        *        *     Request timed out.
+  7    32 ms    29 ms    44 ms  90.182.78.33 
+  8    39 ms    27 ms    37 ms  194.228.115.65 
+  9   238 ms    47 ms    30 ms  194.228.115.64 
+ 10     *        *        *     Request timed out.
+ 11    44 ms    37 ms    48 ms  172.253.50.255 
+ 12    41 ms    55 ms    45 ms  142.251.224.129 
+ 13    56 ms    40 ms    38 ms  prg03s12-in-f14.1e100.net [142.251.36.142] 
 
 Trace complete.
  
@@ -47,7 +47,7 @@ WHOIS Server: whois.markmonitor.com
    Name Server: NS4.GOOGLE.COM
    DNSSEC: unsigned
    URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
->>> Last update of whois database: 2023-04-16T20:23:00Z <<<
+>>> Last update of whois database: 2023-05-09T07:15:21Z <<<
 
 For more information on Whois status codes, please visit https://icann.org/epp
 
@@ -114,13 +114,13 @@ Tech Organization: Google LLC
 Tech State/Province: CA
 Tech Country: US
 Tech Email: Select Request Email Form at https://domains.markmonitor.com/whois/google.com
+Name Server: ns3.google.com
 Name Server: ns2.google.com
 Name Server: ns1.google.com
-Name Server: ns3.google.com
 Name Server: ns4.google.com
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2023-04-16T20:21:01+0000 <<<
+>>> Last update of WHOIS database: 2023-05-09T07:15:17+0000 <<<
 
 For more information on WHOIS status codes, please visit:
   https://www.icann.org/resources/pages/epp-status-codes
@@ -195,13 +195,13 @@ Tech Organization: Google LLC
 Tech State/Province: CA
 Tech Country: US
 Tech Email: Select Request Email Form at https://domains.markmonitor.com/whois/google.com
+Name Server: ns3.google.com
 Name Server: ns2.google.com
 Name Server: ns1.google.com
-Name Server: ns3.google.com
 Name Server: ns4.google.com
 DNSSEC: unsigned
 URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
->>> Last update of WHOIS database: 2023-04-16T20:21:01+0000 <<<
+>>> Last update of WHOIS database: 2023-05-09T07:15:17+0000 <<<
 
 For more information on WHOIS status codes, please visit:
   https://www.icann.org/resources/pages/epp-status-codes
@@ -251,7 +251,30 @@ In Europe, at +44.02032062220
 Server:  UnKnown
 Address:  192.168.122.1
 
-Name:    google.com
-Addresses:  2a00:1450:4014:80f::200e
-	  142.251.37.110
+google.com	AAAA IPv6 address = 2a00:1450:4014:80e::200e
+google.com	nameserver = ns4.google.com
+google.com	nameserver = ns3.google.com
+google.com	nameserver = ns1.google.com
+google.com	nameserver = ns2.google.com
+google.com
+	primary name server = ns1.google.com
+	responsible mail addr = dns-admin.google.com
+	serial  = 530259273
+	refresh = 900 (15 mins)
+	retry   = 900 (15 mins)
+	expire  = 1800 (30 mins)
+	default TTL = 60 (1 min)
+google.com	internet address = 142.251.36.142
+google.com	??? unknown type 65 ???
+google.com	MX preference = 10, mail exchanger = smtp.google.com
 
+ns2.google.com	internet address = 216.239.34.10
+ns2.google.com	AAAA IPv6 address = 2001:4860:4802:34::a
+ns4.google.com	internet address = 216.239.38.10
+ns4.google.com	AAAA IPv6 address = 2001:4860:4802:38::a
+ns3.google.com	internet address = 216.239.36.10
+ns3.google.com	AAAA IPv6 address = 2001:4860:4802:36::a
+ns1.google.com	internet address = 216.239.32.10
+ns1.google.com	AAAA IPv6 address = 2001:4860:4802:32::a
+google.com	internet address = 142.251.36.142
+google.com	AAAA IPv6 address = 2a00:1450:4014:80e::200e

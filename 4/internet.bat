@@ -42,5 +42,5 @@ whois %address% >> internet.txt 2> NUL
 echo Ziskavani DNS zaznamu domeny...
 echo. >> internet.txt
 echo ===== DNS zaznamy: ====== >> internet.txt
-nslookup %address% >> internet.txt 2> NUL
+nslookup -type=any %address% >> internet.txt 2> NUL
 
