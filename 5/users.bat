@@ -1,19 +1,19 @@
 @echo off
-:: at muzeme pouzivat !promenna!
-:: ve for loopu je to potrebne, jinak se pouzije stav promenne pred for loopou"
+rem at muzeme pouzivat !promenna!
+rem ve for loopu je to potrebne, jinak se pouzije stav promenne pred for loopou"
 setlocal enabledelayedexpansion
 
-:: prvni zkontrolujeme jestli ma uzivatel administratorske prava, pokud ne ukoncime program
-:: udelame to zavolanim prikazu, ke kteremu maji pristup pouze admins
+rem prvni zkontrolujeme jestli ma uzivatel administratorske prava, pokud ne ukoncime program
+rem udelame to zavolanim prikazu, ke kteremu maji pristup pouze admins
 net session >nul 2>&1
 if errorlevel 1 (
     echo ERROR: Script musi byt spusten jako admin
     exit /b 1
 ) 
 
-:: vytvorime vsechny skupiny:
-:: pokud je error 2 znamena to, ze skupina uz existuje
-echo ===== Skupiny: =====  >> logs.txt
+rem vytvorime vsechny skupiny:
+rem pokud je error 2 znamena to, ze skupina uz existuje
+echo ===== Skupiny: =====  > logs.txt
 set list=T1A T2A T3A T4A E1A E2A E3A E4A E1B E2B E3B E4B ICT ELEKTRO MUZI ZENY STUDENTI
 (for %%a in (%list%) do ( 
   net localgroup %%a /add > nul 2>&1
@@ -26,14 +26,163 @@ set list=T1A T2A T3A T4A E1A E2A E3A E4A E1B E2B E3B E4B ICT ELEKTRO MUZI ZENY S
   )
 ))
 
-:: pomoci opensource programu gocsv prekonvertujeme xlsx na textovy csv format
+rem pomoci opensource programu gocsv prekonvertujeme xlsx na textovy csv format
 gocsv xlsx --sheet 1 studenti.xlsx > studenti.csv 2>nul
 if errorlevel 1 (
     echo ERROR: Soubor studenti.xlsx je invalidni
     exit /b 1
 )
 
-:: pomoci for projdeme csv soubor
+
+rem mazat nebo vytvaret uzivatele?
+:input
+set "word="
+set /p word=Chcete mazat nebo vytvaret uzivatele? napiste 'mazat' nebo 'vytvaret': 
+
+rem ptej se nez uzivatel zada slovo 'mazat' nebo 'vytvaret'
+if /i "%word%" neq "mazat" (
+    if /i "%word%" neq "vytvaret" (
+        goto input
+    )
+)
+
+rem smazeme vsechny uzivatele ze souboru studenti.csv
+if /i "%word%"=="mazat" (
+    echo.
+    echo -- MAZANI UZIVATELU --
+    echo.
+
+    echo. >> logs.txt
+    echo -- MAZANI UZIVATELU -- >> logs.txt
+    echo. >> logs.txt
+
+    for /f "tokens=1-5 delims=," %%a in (studenti.csv) do (
+        set prijmeni=%%a
+        set jmeno=%%b
+        set trida=%%c
+        set rocnik=%%d
+        set pohlavi=%%e  
+
+        rem hloupym zpusobem odstran diakritiku a dej mala pismena
+        set "jmeno=!jmeno:á=a!"
+        set "jmeno=!jmeno:č=c!"
+        set "jmeno=!jmeno:é=e!"
+        set "jmeno=!jmeno:ě=e!"
+        set "jmeno=!jmeno:í=i!"
+        set "jmeno=!jmeno:ň=n!"
+        set "jmeno=!jmeno:ó=o!"
+        set "jmeno=!jmeno:ř=r!"
+        set "jmeno=!jmeno:š=s!"
+        set "jmeno=!jmeno:Š=s!"
+        set "jmeno=!jmeno:ť=t!"
+        set "jmeno=!jmeno:ú=u!"
+        set "jmeno=!jmeno:ů=u!"
+        set "jmeno=!jmeno:ý=y!"
+        set "jmeno=!jmeno:ž=z!"
+
+        set "jmeno=!jmeno:A=a!"
+        set "jmeno=!jmeno:B=b!"
+        set "jmeno=!jmeno:C=c!"
+        set "jmeno=!jmeno:D=d!"
+        set "jmeno=!jmeno:E=e!"
+        set "jmeno=!jmeno:F=f!"
+        set "jmeno=!jmeno:G=g!"
+        set "jmeno=!jmeno:H=h!"
+        set "jmeno=!jmeno:I=i!"
+        set "jmeno=!jmeno:J=j!"
+        set "jmeno=!jmeno:K=k!"
+        set "jmeno=!jmeno:L=l!"
+        set "jmeno=!jmeno:M=m!"
+        set "jmeno=!jmeno:N=n!"
+        set "jmeno=!jmeno:O=o!"
+        set "jmeno=!jmeno:P=p!"
+        set "jmeno=!jmeno:Q=q!"
+        set "jmeno=!jmeno:R=r!"
+        set "jmeno=!jmeno:S=s!"
+        set "jmeno=!jmeno:T=t!"
+        set "jmeno=!jmeno:U=u!"
+        set "jmeno=!jmeno:V=v!"
+        set "jmeno=!jmeno:W=w!"
+        set "jmeno=!jmeno:X=x!"
+        set "jmeno=!jmeno:Y=y!"
+        set "jmeno=!jmeno:Z=z!"
+
+        set "prijmeni=!prijmeni:á=a!"
+        set "prijmeni=!prijmeni:č=c!"
+        set "prijmeni=!prijmeni:é=e!"
+        set "prijmeni=!prijmeni:ě=e!"
+        set "prijmeni=!prijmeni:í=i!"
+        set "prijmeni=!prijmeni:ň=n!"
+        set "prijmeni=!prijmeni:ó=o!"
+        set "prijmeni=!prijmeni:ř=r!"
+        set "prijmeni=!prijmeni:š=s!"
+        set "prijmeni=!prijmeni:Š=s!"
+        set "prijmeni=!prijmeni:ť=t!"
+        set "prijmeni=!prijmeni:ú=u!"
+        set "prijmeni=!prijmeni:ů=u!"
+        set "prijmeni=!prijmeni:ý=y!"
+        set "prijmeni=!prijmeni:ž=z!"
+        set "prijmeni=!prijmeni:ť=t!"
+
+        set "prijmeni=!prijmeni:A=a!"
+        set "prijmeni=!prijmeni:B=b!"
+        set "prijmeni=!prijmeni:C=c!"
+        set "prijmeni=!prijmeni:D=d!"
+        set "prijmeni=!prijmeni:E=e!"
+        set "prijmeni=!prijmeni:F=f!"
+        set "prijmeni=!prijmeni:G=g!"
+        set "prijmeni=!prijmeni:H=h!"
+        set "prijmeni=!prijmeni:I=i!"
+        set "prijmeni=!prijmeni:J=j!"
+        set "prijmeni=!prijmeni:K=k!"
+        set "prijmeni=!prijmeni:L=l!"
+        set "prijmeni=!prijmeni:M=m!"
+        set "prijmeni=!prijmeni:N=n!"
+        set "prijmeni=!prijmeni:O=o!"
+        set "prijmeni=!prijmeni:P=p!"
+        set "prijmeni=!prijmeni:Q=q!"
+        set "prijmeni=!prijmeni:R=r!"
+        set "prijmeni=!prijmeni:S=s!"
+        set "prijmeni=!prijmeni:T=t!"
+        set "prijmeni=!prijmeni:U=u!"
+        set "prijmeni=!prijmeni:V=v!"
+        set "prijmeni=!prijmeni:W=w!"
+        set "prijmeni=!prijmeni:X=x!"
+        set "prijmeni=!prijmeni:Y=y!"
+        set "prijmeni=!prijmeni:Z=z!"
+
+        echo Mazani uzivatele !jmeno!.!prijmeni! ...
+
+        echo Mazani uzivatele: !jmeno! !prijmeni! >> logs.txt
+        net user "!jmeno!.!prijmeni!" /delete >nul 2>&1
+
+        REM if errorlevel 0 (
+        REM     echo ... Uspech
+        REM ) else (
+        REM     echo ... Neuspech
+        REM )
+
+        REM net user "!jmeno!.!prijmeni!" >nul 2>&1 | find /i "The user name could not be found."
+        REM if errorlevel 1 (
+        REM     net user "!jmeno!.!prijmeni!" /delete >nul 2>&1
+        REM     echo Mazani uzivatele "!jmeno!.!prijmeni!"...
+        REM ) else (
+        REM     echo Uzivatel "!jmeno!.!prijmeni!" neexistuje.
+        REM )
+
+    )
+    exit /b 0
+)
+
+echo.
+echo -- VYTVARENI UZIVATELU --
+echo.
+
+echo. >> logs.txt
+echo. >> logs.txt
+echo -- VYTVARENI UZIVATELU -- >> logs.txt
+echo. >> logs.txt
+rem pomoci for projdeme csv soubor
 for /f "tokens=1-5 delims=," %%a in (studenti.csv) do (
     set prijmeni=%%a
     set jmeno=%%b
@@ -41,7 +190,7 @@ for /f "tokens=1-5 delims=," %%a in (studenti.csv) do (
     set rocnik=%%d
     set pohlavi=%%e
 
-    :: hloupym zpusobem odstran diakritiku a dej mala pismena
+    rem hloupym zpusobem odstran diakritiku a dej mala pismena
     set "jmeno=!jmeno:á=a!"
     set "jmeno=!jmeno:č=c!"
     set "jmeno=!jmeno:é=e!"
@@ -132,33 +281,37 @@ for /f "tokens=1-5 delims=," %%a in (studenti.csv) do (
     REM echo !prijmeni!   !jmeno!   !trida!   !rocnik!  !pohlavi!
 
     echo. >> logs.txt 
-    echo Vytvareni uctu uzivateli: !jmeno! !prijmeni! ...:
+    echo Vytvareni uctu uzivateli: !jmeno! !prijmeni! ...
     echo. >> logs.txt 
     echo ===== Vytvareni uctu uzivateli: !jmeno! !prijmeni!: ===== >> logs.txt
 
-    :: vytvorime uzivatele pomoci jeho jmena a prijmeni
-    :: /Y automaticky potvrdi kdyz se program zepta, jestli chceme vytvorit heslo delsi nez 14 znaku
+    rem vytvorime uzivatele pomoci jeho jmena a prijmeni
+    rem /Y automaticky potvrdi kdyz se program zepta, jestli chceme vytvorit heslo delsi nez 14 znaku
     net user !jmeno!.!prijmeni! !prijmeni!Q12020 /add /logonpasswordchg:yes /Y >nul 2>&1
 
-    :: nastavime datum expirace
-    echo nastavovani data expirace uctu >> logs.txt
+    rem nastavime datum expirace
+    echo nastavovani data expirace uctu: >> logs.txt
     if "!rocnik!"=="První ročník" (
       net user !jmeno!.!prijmeni! /expires:08/31/2026 >nul 2>&1
+      echo    08/31/2026 >> logs.txt
     ) else if "!rocnik!"=="Druhý ročník" (
       net user !jmeno!.!prijmeni! /expires:08/31/2025 >nul 2>&1
+      echo    08/31/2025 >> logs.txt
     ) else if "!rocnik!"=="Třetí ročník" (
       net user !jmeno!.!prijmeni! /expires:08/31/2024 >nul 2>&1
+      echo    08/31/2024 >> logs.txt
     ) else if "!rocnik!"=="Čtvrtý ročník" (
       net user !jmeno!.!prijmeni! /expires:08/31/2023 >nul 2>&1
+      echo    08/31/2023 >> logs.txt
     )
 
-    :: priradime skupinu STUDENTI
+    rem priradime skupinu STUDENTI
     echo prirazovani skupiny STUDENTI >> logs.txt
     net localgroup STUDENTI !jmeno!.!prijmeni! /add >nul 2>&1
 
-    :: zjistime do jako chodi tridy, podle toho pridadime skupinu
-    :: pouzivam if, aby bylo mozne pridat pouze jednu z povolenych trid, kdybych tam dal rovnou tu promennou mohli by nastat errory
-    echo prirazovani skupiny podle tridy >> logs.txt
+    rem zjistime do jako chodi tridy, podle toho pridadime skupinu
+    rem pouzivam if, aby bylo mozne pridat pouze jednu z povolenych trid, kdybych tam dal rovnou tu promennou mohli by nastat errory
+    echo prirazovani skupiny tridy: !trida! >> logs.txt
     if "!trida!"=="T1A" (
       net localgroup T1A !jmeno!.!prijmeni! /add >nul 2>&1
     ) else if "!trida!"=="T2A" (
@@ -185,20 +338,24 @@ for /f "tokens=1-5 delims=," %%a in (studenti.csv) do (
       net localgroup E4B !jmeno!.!prijmeni! /add >nul 2>&1
     ) 
 
-    :: podle prvniho pismena ze tridy pridarime bud ICT nebo ELEKTRO
-    echo prirazovani skupiny podle druhu oboru >> logs.txt
+    rem podle prvniho pismena ze tridy pridarime bud ICT nebo ELEKTRO
+    echo prirazovani skupiny druhu oboru: >> logs.txt
     if "!trida:~0,1!"=="T" (
       net localgroup ICT !jmeno!.!prijmeni! /add >nul 2>&1
+      echo     ICT >> logs.txt
     ) else if "!trida:~0,1!"=="E" (
       net localgroup ELEKTRO !jmeno!.!prijmeni! /add >nul 2>&1
+      echo     ELEKTRO >> logs.txt
     )
 
-    :: priradime skpinu podle pohlavi
-    echo prirazovani skupiny podle pohlavi >> logs.txt
+    rem priradime skpinu podle pohlavi
+    echo prirazovani skupiny pohlavi: >> logs.txt
     if "!pohlavi!"=="Muž" (
       net localgroup MUZI !jmeno!.!prijmeni! /add >nul 2>&1
+      echo     MUZI >> logs.txt
     ) else if "!pohlavi!"=="Žena" (
       net localgroup ZENY !jmeno!.!prijmeni! /add >nul 2>&1
+      echo     ZENY >> logs.txt
     ) 
 
     echo. >> logs.txt
