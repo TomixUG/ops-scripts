@@ -13,22 +13,31 @@ echo varovani: nelze zalohovat aktualne pouzivany disk
 echo.
 
 :: snazime se od uzivatele dostat vstup, ptame se do te doby nez ho da
+:loop
 set partition=
 set /p partition="Zadejte partition, kterou chcete zalohovat (napr. D:\): "
-:loop
 if "%partition%"=="" (
-    set /p partition="Zadejte partition, kterou chcete zalohovat (napr. D:\): "
     goto loop
 )
+:: zkontrolujeme jestli je cesta validni
+IF NOT EXIST "%partition%\" (
+    echo partition "%partition%" neni validni!
+    goto loop
+) 
 
 :: snazime se od uzivatele dostat vstup, ptame se do te doby nez ho da
+:loop2
 set imagename=
 set /p imagename="Zadejte cestu kam chcete ulozit bitovou kopii (napr. C:\backup.wim): "
-:loop2
 if "%imagename%"=="" (
-    set /p imagename="Zadejte cestu kam chcete ulozit bitovou kopii (napr. C:\backup.wim): "
     goto loop2
 )
+:: vezmeme parent path (cesta k tomu souboru, bez toho souboru) a zkontrolujeme jeslti je validni
+set "parentPath=%imagename%\.."
+IF NOT EXIST "%parentPath%\" (
+    echo cesta neni validni!
+    goto loop2
+) 
 
 echo.
 echo Jdeme zalohovat partition %partition%
